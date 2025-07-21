@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="form-container" id="loginFormContainer">
+        <h2>Login Form</h2>
+        <form id="loginForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" placeholder="Enter your mobile number"
+                   inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required
+                   title="Please enter a valid 10-digit mobile number">
+
+            <button type="submit">Login</button>
+        </form>
+        <p id="successMessage" style="color: green; display: none;">You have submitted successfully!</p>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="loginfirebase.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

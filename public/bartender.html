@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bartender Form with Email</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chefcontainer">
+        <div class="chefcontainer2">
+
+            <h1 class="details">Enter Details for Bartender </h1>
+
+            <!-- Form starts here -->
+            <form action="https://api.web3forms.com/submit" method="post">
+                
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="9899e753-bc4c-41a0-8e28-a6d99cb3d34b">
+
+                <!-- Name -->
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required name="name">
+
+                <!-- Phone Number -->
+                <label for="number">Phone Number</label>
+                <input type="text" id="number" placeholder="Enter your phone number" required name="phone">
+
+                <!-- Address -->
+                <label for="address">Address</label>
+                <input type="text" id="address" placeholder="Enter your address" required name="address">
+
+                <!-- Number of People -->
+                <label for="total">No of People</label>
+                <input type="text" id="total" placeholder="Enter number of people" required name="no_of_people">
+
+                <!-- Date -->
+                <label for="date">Date for which you want to hire</label>
+                <input type="date" id="date" required name="hire_date">
+
+                <!-- Occasion -->
+                <label for="occassion">Occasion</label>
+                <input type="text" id="occassion" placeholder="e.g. Bhirthday, Party, etc." name="occassion">
+
+                <!-- Serving Time -->
+                <label for="time">Serving / ArrivalTime</label>
+                <input type="time" id="time" name="serving_time" required>
+
+                <!--menu-->
+                <label for="menu">Menu</label>
+                <input type="text" id="menu" placeholder="e.g. Cocktail, Mocktail, etc" name="menu">
+
+                <!-- Submit Button -->
+                <button type="submit" id="b1">Submit Details</button>
+            </form>
+            <!-- Form ends here -->
+
+        </div>
+    </div>
+</body>
+</html>

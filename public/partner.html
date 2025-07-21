@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Form</title>
+    <link rel="stylesheet" href="partner.css">
+</head>
+<body>
+    <div class="form-container" id="partnerFormContainer">
+        <h2>Partner Form</h2>
+        <form id="partnerForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" placeholder="Enter your mobile number"
+                   inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required
+                   title="Please enter a valid 10-digit mobile number">
+
+            <label for="role">Select Role:</label>
+            <select id="role" name="role" required>
+                <option value="" disabled selected>Select a role</option>
+                <option value="chef">Chef</option>
+                <option value="bartender">Bartender</option>
+                <option value="waiter">Waiter</option>
+            </select>
+
+            <!-- Hidden sections for Chef -->
+            <div id="chefFields" class="hidden">
+                <label for="chefExperience">Work Experience (years):</label>
+                <input type="number" id="chefExperience" name="chefExperience" placeholder="Experience in years">
+
+                <label for="chefSalary">Expected Salary:</label>
+                <input type="number" id="chefSalary" name="chefSalary" placeholder="Enter expected salary">
+
+                <label for="chefSkills">What Can Cook:</label>
+                <textarea id="chefSkills" name="chefSkills" placeholder="e.g. North Indian, South Indian, Chinese, Mexican, Italian, American, Thai, Continental, Seafood"></textarea>
+            </div>
+
+            <!-- Hidden sections for Bartender -->
+            <div id="bartenderFields" class="hidden">
+                <label for="bartenderExperience">Work Experience (years):</label>
+                <input type="number" id="bartenderExperience" name="bartenderExperience" placeholder="Experience in years">
+
+                <label for="bartenderSalary">Expected Salary:</label>
+                <input type="number" id="bartenderSalary" name="bartenderSalary" placeholder="Enter expected salary">
+
+                <label for="bartenderSkills">What Can Make:</label>
+                <textarea id="bartenderSkills" name="bartenderSkills" placeholder="e.g. Cocktails, Mocktails"></textarea>
+            </div>
+
+            <!-- Hidden sections for Waiter -->
+            <div id="waiterFields" class="hidden">
+                <label for="waiterExperience">Work Experience (years):</label>
+                <input type="number" id="waiterExperience" name="waiterExperience" placeholder="Experience in years">
+
+                <label for="waiterSalary">Expected Salary:</label>
+                <input type="number" id="waiterSalary" name="waiterSalary" placeholder="Enter expected salary">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+        <p id="successMessage" style="color: green; display: none;">You have submitted successfully!</p>
+    </div>
+
+    <!-- Include external JS files -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="partnerfirebase.js"></script>
+    <script src="partner.js"></script>
+</body>
+</html>
